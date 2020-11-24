@@ -29,8 +29,35 @@
 
 .contentGrid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px;
+
+}
+
+#one{
+    background-image: url('../images/industrial-robotic-arm.jpg');
+    background-size: contain;
+}
+
+#two{
+    background-image: url('../images/cruise_self_driving_car.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+#three{
+    background-image: url('../images/DJI-drone.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+#four{
+    background-image: url('../images/ROV.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 /* .mainGrid div:nth-child(even){
