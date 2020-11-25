@@ -1,7 +1,7 @@
 .mainGrid{
     display: grid;
-    grid-template-columns: 1fr 800px 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
     /* grid-template-rows: auto; */
     grid-template-areas: 
     "header header header"
@@ -13,14 +13,28 @@
 
 .header{
     grid-area: header;
+    position: relative;
+    z-index: 1;
+
+}
+
+.bg{
+    position: absolute;
+    grid-area: header;
+    background-image: url(../images/mech_stuff.jpg);
+    opacity: 0.4;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .sidebar{
     grid-area: sidebar;
-}
-
-.contentGrid{
-    grid-area: contentGrid;
+    /* padding-top: 10px; */
+    /* margin-top: 10; */
+    /* background-color: blue; */
 }
 
 .footer{
@@ -28,105 +42,98 @@
 }
 
 .contentGrid{
+    /* background-color: blueviolet; */
+    padding-top: 50px;
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    /* grid-template-rows: 1fr 1fr; */
+}
 
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    /* height: 500px; */
+    border: 5px solid black;
+}
+
+#oneName{
+    align-self: center;
+    /* align-items: center; */
+    /* background-color: red; */
+    margin: 10px;
+    /* border-radius: 50px; */
 }
 
 #one{
-    background-image: url('../images/industrial-robotic-arm.jpg');
+    background: transparent url('../images/3industrial-robotic-arm.jpg');
     background-size: contain;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    border: 5px solid purple;
+    margin: 10px;
+    background-position: center;
+    /* background-color: purple; */
+    border-radius: 80px;
+}
+
+#twoName{
+    align-self: center;
+    /* align-items: center; */
+    /* background-color: red; */
+    margin: 10px;
+    /* border-radius: 50px; */
 }
 
 #two{
-    background-image: url('../images/cruise_self_driving_car.png');
+    background: transparent url('../images/2drone.jpg');
     background-size: contain;
+    min-height: 200px;
     background-repeat: no-repeat;
-    background-position: 50%;
+    border: 5px solid purple;
+    margin: 10px;
+    background-position: center;
+    /* background-color: purple; */
+    border-radius: 80px;
+}
+
+#threeName{
+    align-self: center;
+    /* align-items: center; */
+    /* background-color: red; */
+    margin: 10px;
+    /* border-radius: 50px; */
 }
 
 #three{
-    background-image: url('../images/DJI-drone.jpg');
+    background: transparent url('../images/2drone.jpg');
     background-size: contain;
+    min-height: 200px;
     background-repeat: no-repeat;
-    background-position: 50%;
+    border: 5px solid purple;
+    margin: 10px;
+    background-position: center;
+    /* background-color: purple; */
+    border-radius: 80px;
+}
+
+#fourName{
+    align-self: center;
+    /* align-items: center; */
+    /* background-color: red; */
+    margin: 10px;
+    /* border-radius: 50px; */
 }
 
 #four{
-    background-image: url('../images/ROV.jpeg');
+    background: transparent url('../images/2drone.jpg');
     background-size: contain;
+    min-height: 200px;
     background-repeat: no-repeat;
-    background-position: 50%;
+    border: 5px solid purple;
+    margin: 10px;
+    background-position: center;
+    /* background-color: purple; */
+    border-radius: 80px;
 }
-
-/* .mainGrid div:nth-child(even){
-    background-color: red;
-}
-
-.mainGrid div:nth-child(odd){
-    background-color: green;
-} */
-/* .container {
-    display: grid;
-    grid-template-columns: 300px 300px;;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "hd" 
-    "sd" 
-    "main" 
-    "ft";
-}
-
-
-
-#nestedGrid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-
-}
-
-.photoBox{
-    grid-area: ft;
-    width: 350px;
-    height: 150px;
-    border: solid red;
-    background: yellow;
-  
-  } */
-
-
-/* .box {
-    border: 1px solid red;
-    background: #F8FA9D;
-} */
-
-/* .header {
-
-    grid-area: hd;
-}
-
-.footer {
-    grid-area: ft;
-}
-
-.sidebar {
-    grid-area: sd;
-}
-
-.content {
-    grid-area: main;
-} */
-
-/* If Screen Is Wide Enough */
-
-/* @media(min-width:600px) {
-    .container {
-        display: grid;
-        grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 250px 600px;
-        grid-template-areas: "hd hd hd hd hd hd hd hd" "sd sd main main main main main main" "ft ft ft ft ft ft ft ft";
-        border: 2px solid red;
-    }
-} */
